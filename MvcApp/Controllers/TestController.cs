@@ -30,16 +30,16 @@ namespace MvcApp.Controllers
 
         public IActionResult Index(int? companyId)
         {
-            // формируем список компаний для передачи в представление
+            // form a list of companies to transfer to the view
             List<CompanyModel> compModels = companies
                 .Select(c => new CompanyModel(c.Id, c.Name)).ToList();
 
-            // добавляем на первое место
+            // add first place
             compModels.Insert(0, new CompanyModel(0, "All"));
 
             TestViewModel viewModel = new() { Companies = compModels, People = people };
 
-            // если передан id компании, фильтруем список
+            // if parameter CompanyId is passed, filter the list
             if (companyId != null && companyId > 0)
                 viewModel.People = people.Where(p => p.Work.Id == companyId);
 
