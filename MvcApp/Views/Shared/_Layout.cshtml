@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.title</title>
+
+    <style>
+        td{padding:5px;}
+        tr:nth-child(even) {background: #CCC}
+        tr:nth-child(odd) {background: #FFF}
+    </style>    
+</head>
+
+<body>
+    <div>
+        <a href="/Home/Index">Index</a> | <a href="/Home/About">About</a> | <a href="/Test/Index">Test</a>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
