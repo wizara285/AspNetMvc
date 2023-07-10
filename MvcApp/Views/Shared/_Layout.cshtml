@@ -1,23 +1,23 @@
 ﻿<!DOCTYPE html>
 
 <html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.title</title>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.title</title>
 
-    <style>
-        td{padding:5px;}
-        tr:nth-child(even) {background: #CCC}
-        tr:nth-child(odd) {background: #FFF}
-    </style>    
-</head>
+        <style>
+            td{padding:5px;}
+            tr:nth-child(even) {background: #CCC}
+            tr:nth-child(odd) {background: #FFF}
+        </style>    
+    </head>
 
-<body>
-    <div>
-        <a href="/Home/Index">Index</a> | <a href="/Home/About">About</a> | <a href="/Test/Index">Test</a>
-    </div>
-    <div>
-        @RenderBody()
-    </div>
-</body>
+    <body>
+        <div>
+            <a asp-controller="Home" asp-action="Index">Index</a> | <a asp-controller="Home" asp-action="About">About</a> | <a asp-controller="Test" asp-action="Index">Test</a>
+        </div>
+        <div>
+            @RenderBody()
+        </div>
+    </body>
 </html>
